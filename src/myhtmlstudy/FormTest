@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div id="header" width="100%" style="background-color:#FFA500;">
+<div id="header" style="background-color:#FFA500;">
 <h1 align='center' style="padding:5px">用户注册与登记</h1>
 </div>
 
@@ -14,15 +14,15 @@
 	<table align="center" width='500px' style="background-color:#FFD700;padding:10px">
 		<tr>
 			<td>First name: </td>
-			<td><input type="text" name="firstname"></td>
+			<td><input type="text" name="firstname" size="40" maxlength="50"></td>
 		</tr>
 		<tr>
 			<td>Last name: </td>
-			<td><input type="text" name="lastname"></td>
+			<td><input type="text" name="lastname" size="40" maxlength="50"></td>
 		</tr>
 		<tr>
 			<td>Password: </td>
-			<td><input type="password" name='password'></td>
+			<td><input type="password" name='password' size="40" maxlength="50"></td>
 		</tr>
 		<tr>
 			<td>E-mail: </td>
@@ -30,14 +30,18 @@
 		</tr>
 		
 		<tr>
-			<td>是否打印: </td>
-			<td><input type="checkbox" checked="checked"></td>
+			<td>我的爱好: </td>
+			<td>
+				<input type="checkbox" name='sport' value='football' checked="checked">足球</br>
+				<input type="checkbox" name='sport' value='basketball'>篮球</br>
+				<input type="checkbox" name='sport' value='volleyball'>网球
+			</td>
 		</tr>
 		<tr>
 			<td>性别</td>
 			<td>
-				<input type="radio" checked="checked" name='sex'>男
-				<input type="radio" name='sex'>女
+				<input type="radio" name='sex' value='male' checked="checked" >男
+				<input type="radio" name='sex' value='female'>女
 			</td>
 		</tr>
 		<tr>
