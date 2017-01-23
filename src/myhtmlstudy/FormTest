@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<div id="header" width="100%" style="background-color:#FFA500;">
+<h1 align='center' style="padding:5px">用户注册与登记</h1>
+</div>
+
+<form action='' method="get">
+	<table align="center" width='500px' style="background-color:#FFD700;padding:10px">
+		<tr>
+			<td>First name: </td>
+			<td><input type="text" name="firstname"></td>
+		</tr>
+		<tr>
+			<td>Last name: </td>
+			<td><input type="text" name="lastname"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="  submit " ></td>
+			<td><input type="button" value="  reset  "></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
