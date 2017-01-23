@@ -21,10 +21,49 @@
 			<td><input type="text" name="lastname"></td>
 		</tr>
 		<tr>
+			<td>Password: </td>
+			<td><input type="password" name='password'></td>
+		</tr>
+		<tr>
+			<td>E-mail: </td>
+			<td><input type="text" name="email" size="40" maxlength="50"></td>
+		</tr>
+		
+		<tr>
+			<td>是否打印: </td>
+			<td><input type="checkbox" checked="checked"></td>
+		</tr>
+		<tr>
+			<td>性别</td>
+			<td>
+				<input type="radio" checked="checked" name='sex'>男
+				<input type="radio" name='sex'>女
+			</td>
+		</tr>
+		<tr>
+			<td><input type="hidden"></td>
+			<td><input type="hidden"></td>
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td>
+				<select>
+					<option>苹果</option>
+					<option selected="selected">香蕉</option>
+					<option>樱桃</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>备注</td>
+			<td><textarea name="comment" rows="10" cols="20"></textarea></td>
+		</tr>
+		<tr>
 			<td><input type="submit" value="  submit " ></td>
 			<td><input type="button" value="  reset  "></td>
 		</tr>
 	</table>
 </form>
+
 </body>
 </html>
