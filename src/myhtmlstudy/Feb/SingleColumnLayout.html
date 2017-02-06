@@ -10,6 +10,8 @@
 	#title{
 		width:500px;
 		background-color:#FFA500;
+		/*display: inline-block;*/ /* 显示display，display:block可以将span指定为块，而display：inline可以将块转换为行 */
+		/*margin:0 auto;*/ /* B. 外边距0px，自适应，默认居中 */
 	}
 
 	.parent{
@@ -27,7 +29,7 @@
 	}
 	
 	h1,h2{
-		text-align:center;
+		/* text-align:center; */ /* A. 用text-aligh实现水平居中 */
 	}
 </style>
 
@@ -44,7 +46,7 @@
 	</div>
 	
 	<div class='child'>
-			块2
+		块2
 	</div>
 	
 
