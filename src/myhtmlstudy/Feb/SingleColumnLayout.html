@@ -8,52 +8,50 @@
 
 <style>
 	#title{
-		width:500px;
+		width:400px;/* margin前必须指定宽度，不然容器占满整行 */
+		margin:0 auto;
 		background-color:#FFA500;
-		/*display: inline-block;*/ /* 显示display，display:block可以将span指定为块，而display：inline可以将块转换为行 */
-		/*margin:0 auto;*/ /* B. 外边距0px，自适应，默认居中 */
-	}
-
-	.parent{
-		width:300px;
-		height:200px;
-		background-color:red;
-		float:left;
 	}
 	
-	.child{
-		width:200px;
-		height:200px;
+	#left{
+		width:400px;
+		height:600px;
+		float:left;/* 布局靠左浮动 */
 		background-color:yellow;
-		float:left;
 	}
 	
-	h1,h2{
-		/* text-align:center; */ /* A. 用text-aligh实现水平居中 */
+	#right{
+		margin-left:400px;/*外边距400px即为左边占用的宽度*/
+		height:600px;
+		background-color:red;
+	}
+	
+	#bottom{
+		width:100%;
+		height:100px;
+		background-color:green;
+		text-align:center;
+	}
+	
+	h1,h4,h6{
+		text-align:center;
 	}
 </style>
 
 <body>
-
 	<div id = 'title'>
-		<h1>单列布局，水平居中</h1>
-		<h2>多用于标题，以及内容区域的组织形式</h2>
-		<h5>A. 用text-aligh实现水平居中</h5>
-		<h5>B. margin:0 auto;外边距0px，自适应，默认居中</h5>
+		<h1>多列布局</h1>
+		<h4>左列定宽，右列自适应</h4>
+		<h6>适用于定宽的一侧常为导航，自适应的一侧为内容的布局</h6>
+		<h6>利用float+margin实现<h6/>
 	</div>
 	
-	<div class='parent'>
-		块1	
-		
-	</div>
+	<div id = 'left'>定宽</div>
 	
-	<div class='child'>
-		块2
-	</div>
+	<div id = 'right'>自适应</div>
 	
+	<div id = 'bottom'>底部</div>
 
 </body>
 
 </html>
-
-
