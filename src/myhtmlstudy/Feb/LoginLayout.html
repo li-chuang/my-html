@@ -22,11 +22,46 @@
 		top:25%;		  /* left,right,top,buttom都是用来进行绝对定位的 */
 		background-color:#FFA500;
 	}
+	
+	h3{
+		text-align:center;
+	}
+	
+	#mytable{
+		width:80%;
+		margin:0 auto;
+	}
+	 
+	td{
+		width:45%;
+	}
+	
+	.right{
+		text-align:center;
+	}
 </style>
 
 <body>
 	<div id='container'>
-		<div id='login'>登录DIV</div>
+		<div id='login'>
+			<h3>登录DIV</h3>
+			<form id='myform' action='' method="get">
+				<table id = 'mytable'>
+					<tr>
+						<td class='right'>用户名：</td>
+						<td><input type="text" name="username" size="30" maxlength="30"></td>
+					</tr>
+					<tr>
+						<td class='right'>密  码：</td>
+						<td><input type="text" name="password" size="30" maxlength="30"></td>
+					</tr>
+					<tr>
+						<td class='right'><input type="submit" value="  submit " ></td>
+						<td><input type="button" value="  reset  "></td>
+					</tr>
+				</table>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
