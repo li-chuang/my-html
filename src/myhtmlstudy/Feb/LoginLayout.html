@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>菜鸟教程(runoob.com)</title> 
+</head>
+
+<style>
+	#container{
+		width:100%;
+		height:850px;
+		position:relative;/* 这里的相对类似于一种自适应 */
+		background-color:gray;
+	}
+	
+	#login{
+		width:30%;
+		height:300px;
+		margin:0 auto;
+		position:absolute;/* 这里连续3个属性都是用来垂直定位在中间的 */
+		left:35%;		  /* 注意：通常都是父容器使用相对定位，子容器使用绝对定位;这也算是一种套路 */
+		top:100px;		  /* left,right,top,buttom都是用来进行绝对定位的 */
+		background-color:#FFA500;
+	}
+</style>
+
+<body>
+	<div id='container'>
+		<div id='login'>登录DIV</div>
+	</div>
+</body>
+</html>
+
