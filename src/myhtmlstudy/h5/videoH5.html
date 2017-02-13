@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>菜鸟教程(runoob.com)</title>
+	<style>
+		#div1{
+			text-align:center;
+		}
+		
+		<!--#video1{
+			width:420;
+		}-->
+	</style>
+	
+</head>
+
+<body>
+	<div id = 'div1'>
+		<button onclick="playPause()">播放/暂停</button>
+		<button onclick="makeBig()">放大</button>
+		<button onclick="makeSmall()">缩小</button>
+		<button onclick="makeNormal()">普通</button>
+		<br>
+		<video id = 'video1' width='420'> <!-- 设置视频播放器的宽度,注意；这里的宽度没有加px,默认就是，加了反而会出错 -->
+			<source src="http://www.runoob.com/try/demo_source/mov_bbb.mp4" type="video/mp4">
+			<source src="http://www.runoob.com/try/demo_source/mov_bbb.ogg" type="video/ogg">
+			您的浏览器不支持 HTML5 video 标签。
+		</video>
+	<div>
+	
+	<script>
+		var myVideo = document.getElementById("video1");
+	
+		function playPause()
+		{
+			if(myVideo.paused)
+				myVideo.play();
+			else
+				myVideo.pause();
+		}
+		
+		//function makeBig()
+		//{
+			//myVideo.width=560px;
+			//myVideo.width=560; 
+		//}
+		
+		function makeBig()
+		{ 
+			myVideo.width=560; 
+		} 
+		
+		function makeSmall()
+		{
+			myVideo.width=320;
+		}
+		
+		function makeNormal()
+		{
+			myVideo.width=420;
+		}
+	</script>
+</body>
+</html>
