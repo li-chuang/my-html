@@ -18,26 +18,29 @@
 	</style>
 	<script>
 		function drop(ev){
-			ev.preventDefault();
-			var data=ev.dataTransfer.getData("Text");
-			ev.target.appendChild(document.getElementById(data)); 
+			ev.preventDefault();// 调用 preventDefault() 来避免浏览器对数据的默认处理（drop 事件的默认行为是以链接形式打开）
+			var data=ev.dataTransfer.getData("Text");// 通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据
+			ev.target.appendChild(document.getElementById(data)); // 把被拖元素追加到放置元素（目标元素）中
 		}
 		
 		function allowDrop(ev){
-			ev.preventDefault(); 
+			ev.preventDefault(); // 默认地，无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须阻止对元素的默认处理方式。
 		}
 		
 		function drag(ev){
-			ev.dataTransfer.setData("Text",ev.target.id); 
+			ev.dataTransfer.setData("Text",ev.target.id); // 设置被拖数据的数据类型和值,数据类型是 "Text"，值是可拖动元素的 id ("drag1")
 		}
 	</script>
 </head>
 <body>
 	<p>拖动 W3CSchool.cc 图片到矩形框中:</p>
 	<div id ='div1' ondrop='drop(event)' ondragover='allowDrop(event)'></div>
+	<!-- 3.设置放到何处，ondragover 事件规定在何处放置被拖动的数据 -->
+	<!-- 4.当放置被拖数据时，会发生 drop 事件，即ondrop事件 -->
 	<br>
 	<img id='drag1' src='logo.png' draggable='true' ondragstart='drag(event)'>
-
+	<!-- 1.为了使元素可拖动，需要将draggable设置为true -->
+	<!-- 2.然后，规定当元素被拖动时，会发生什么，这点在ondragstart中设置 -->
 
 <body>
 </html>
