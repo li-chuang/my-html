@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>菜鸟教程(runoob.com)</title>
+		<style>
+		
+		</style>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=··············"></script>
+		<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script> 
+		<script>
+			var x=document.getElementById("demo");
+			function getLocation()
+			{
+				if (navigator.geolocation)// 检测是否支持地理定位
+				{
+					// 如果getCurrentPosition()运行成功，则向参数showPosition中规定的函数返回一个coordinates对象
+					// getCurrentPosition() 方法的第二个参数用于处理错误。
+					navigator.geolocation.getCurrentPosition(showPosition,showError);
+				}
+				else
+				{
+					x.innerHTML="该浏览器不支持获取地理位置。";
+				}
+			}
+
+			// showPosition() 函数获得并显示经度和纬度
+			function showPosition(position)
+			{
+				//x.innerHTML="纬度: " + position.coords.latitude + 
+				//"<br>经度: " + position.coords.longitude;	
+				
+				// 在Google地图中显示位置
+				//var latlon=position.coords.latitude+","+position.coords.longitude;
+				//var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+				//+latlon+"&zoom=14&size=400x300&sensor=false";
+				//document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+				
+				// 在百度地图中显示位置
+				//var currentLat = position.coords.latitude;
+				//var currentLon = position.coords.longitude;
+				//var gpsPoint = new BMap.Point(currentLon, currentLat);
+				//BMap.Convertor.translate(gpsPoint, 0, initMap); //转换坐标 
+				
+				 x.innerHTML="Latitude: " + position.coords.latitude + "<br />Longitude: " + position.coords.longitude;
+				window.location.href="http://api.map.baidu.com/direction?origin=latlng:"+position.coords.latitude+","+position.coords.longitude+"|name:我家&destination=侨鑫汇悦台&mode=driving&region=广州&output=html&src=yourCompanyName|yourAppName";
+			}
+			
+			function initMap(point){
+				//初始化地图
+				map = new BMap.Map("map");
+				map.addControl(new BMap.NavigationControl());
+				map.addControl(new BMap.ScaleControl());
+				map.addControl(new BMap.OverviewMapControl());
+				map.centerAndZoom(point, 15);
+				map.addOverlay(new BMap.Marker(point))
+			} 
+						
+			// 规定当获取用户位置失败时运行的函数
+			function showError(error)
+			{
+				switch(error.code) 
+				{
+					case error.PERMISSION_DENIED:
+						x.innerHTML="用户拒绝对获取地理位置的请求。"
+						break;
+					case error.POSITION_UNAVAILABLE:
+						x.innerHTML="位置信息是不可用的。"
+						break;
+					case error.TIMEOUT:
+						x.innerHTML="请求用户地理位置超时。"
+						break;
+					case error.UNKNOWN_ERROR:
+						x.innerHTML="未知错误。"
+						break;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+		<button onclick="getLocation()">点我</button>
+		<div id="mapholder"></div>
+	<body>
+</html>
