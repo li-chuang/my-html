@@ -14,15 +14,36 @@
 			text-align:center;
 			background-color:#cc80dd;
 		}
+		#main{
+			width:70%;
+			height:700px;
+			float:left;
+		}
 		section{
-			width:400px;
-			height:300px;
+			width:100%;
+			height:100px;
+			background-color:#96a7dd
 			
 		}
 		
 		article{
-			width:70%;
-			height:600px;
+			width:100%;
+			height:400px;
+			background-color:red;
+		}
+		aside{
+			width:30%;
+			height:700px;
+			float:left;
+			background-color:#f07766
+		}
+		footer{
+			width:100%;
+			height:100px;
+			margin:0 auto;
+			text-align:center;
+			float:left;
+			background-color:gray;
 		}
 	</style>
 </head>
@@ -40,21 +61,22 @@
 	<header>
 		<h1>这是文档的头部区域</h1>		
 	</header>	
-	
-	<section>
-	  <h1>WWF，这里是一段</h1>
-	  <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
-	</section>
+	<div id = 'main'>
+		<section>
+		  <h1>WWF，这里是一段</h1>
+		  <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+		</section>
 
-	<section>
-	  <h1>WWF's Panda symbol，这里是另外一段</h1>
-	  <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
-	</section>
-	
-	<article>
-	  <h1>这里是独立文档区</h1>
-	  <p>Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。</p>
-	</article>
+		<section>
+		  <h1>WWF's Panda symbol，这里是另外一段</h1>
+		  <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+		</section>
+		
+		<article>
+		  <h1>这里是独立文档区</h1>
+		  <p>Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。</p>
+		</article>
+	</div>
 	
 	<aside>
 		<h1>这是文档的侧边栏</h1>
