@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html manifest="demo_html.appcache">
+<head>
+	<meta charset="utf-8"> 
+	<title>HTML5本地存储之Web Storage篇</title>
+</head>
+<body>
+	<script src="demo_time.js">
+	</script>
+	
+	<p>应用程序缓存，可在没有因特网连接时进行访问</p><br>
+	<p>为了保证应用程序缓存可以正常使用，必须在html标签中添加manifest="demo_html.appcache"</p><br>
+	<p id="timePara"><button onclick="getDateTime()">获取日期和时间</button></p>
+	<p><img src="http://www.runoob.com/try/demo_source/logo.png" width="336" height="69"></p>
+	<p>尝试打开 <a href="http://www.runoob.com/try/demo_source/tryhtml5_html_manifest.htm" target="_blank">这个页面</a>, 在离线的状态下重新载入这个页面，页面也可以访问。</p>
+</body>
+</html>
