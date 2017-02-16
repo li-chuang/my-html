@@ -36,6 +36,20 @@
 		<br/>  
 		<div id="list">  
 		</div>  
+		
+		<p> 不管是 localStorage，还是 sessionStorage，可使用的API都相同，常用的有如下几个（以localStorage为例）：</p>
+			<li>保存数据：localStorage.setItem(key,value);
+			<li>读取数据：localStorage.getItem(key);
+			<li>删除单个数据：localStorage.removeItem(key);
+			<li>删除所有数据：localStorage.clear();
+			<li>得到某个索引的key：localStorage.key(index);
+			<br>
+		<p>以下按钮可以统计点击按钮的次数</p>
+		<div>
+			<input type='button' onclick='count()' value='点击'><br>
+			点击的次数：<div id='click_number'><br/></div>
+		</div>
+		
 		<script>
 		// 载入所有存储在localStorage的数据
 		loadAll(); 	
@@ -71,6 +85,24 @@
 				list.innerHTML = "数据为空……";  
 			}  
 		}      
+		// 统计点击按钮的次数
+		function count(){
+			var click_number = document.getElementById('click_number');			
+			if(typeof(Storage)!=="undefined")
+			{
+				// 是的! 支持 localStorage  sessionStorage 对象!
+				// 一些代码.....
+				if(localStorage.count){
+					localStorage.count = Number(localStorage.count)+1;
+				}else{
+					localStorage.count = 1;
+				}
+				click_number.innerHTML=localStorage.count;
+			} else {
+				// 抱歉! 不支持 web 存储。
+				click_number.innerHTML='对不起，您的浏览器不支持 web 存储。';
+			}
+		}
 		</script>
 </body>  
 
