@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>菜鸟教程(runoob.com)</title> 
+	<style>
+		#radius{
+			border:2px solid #a1a1a1;
+			padding:10px 40px;
+			background-color:#DDDDDD;
+			width:400px;
+			border-radius:25px;/* CSS3中border-radius属性被用于创建圆角,后面的参数为圆角半径 */
+		}
+		
+		#shadow{
+			width:400px;
+			padding:10px 40px;
+			border:2px solid red;
+			background-color:yellow;
+			box-shadow: 10px 10px 5px #888888;/* CSS3中box-shadow属性被用来显示阴影 */
+			/* box-shadow: h-shadow v-shadow blur spread color inset; */
+			/* 水平阴影的位置，垂直阴影的位置，模糊距离，阴影的大小，阴影的颜色，从外层的阴影（开始时）改变阴影内侧阴影 */
+		}
+		
+		#image{
+			width:400px;
+			padding:10px 40px;
+			border-image:url(border.png) 30 30 stretch;
+		}
+		
+		#round
+		{
+			-webkit-border-image:url(border.png) 30 30 round; /* Safari 5 and older */
+			-o-border-image:url(border.png) 30 30 round; /* Opera */
+			border-image:url(border.png) 30 30 round;
+		}
+
+		#stretch
+		{
+			-webkit-border-image:url(border.png) 30 30 stretch; /* Safari 5 and older */
+			-o-border-image:url(border.png) 30 30 stretch; /* Opera */
+			border-image:url(border.png) 30 30 stretch;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- CSS3圆角 -->
+	<div id='radius'>
+		<p>border-radius 属性允许您为元素添加圆角边框！ </p>
+	</div>
+	
+	<!-- CSS3盒阴影 -->
+	<div id='shadow'>
+		<p>box-shadow 属性为div盒子添加阴影</p>
+	</div>
+	
+	<!-- CSS3边界图片 -->
+	<div id='image'>
+		<p>border-image属性允许你指定一个图片作为边框</p>
+	</div>
+	
+	<p><b>注意: </b> Internet Explorer 不支持 border-image 属性。</p>
+	<p> border-image 属性用于设置图片的边框。</p>
+
+	<div id="round">这里，图像平铺（重复）来填充该区域。</div>
+	<br>
+	<div id="stretch">这里，图像被拉伸以填充该区域。</div>
+
+	<p>这是我们使用的图片素材：</p>
+	<img src="border.png" />
+</body>
+</html>
+
