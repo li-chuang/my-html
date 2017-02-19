@@ -18,7 +18,11 @@
 		#grad3{
 			height:200px;
 			background:linear-gradient(to bottom right,red,blue);
-			/*background: linear-gradient(to bottom right, red , blue);*/
+		}
+		
+		#grad4{
+			height:200px;
+			background:linear-gradient(-90deg, red, blue);
 		}
 	</style>
 </head>
@@ -39,7 +43,8 @@
 	
 	<h3>线性渐变 - 自定义渐变方向</h3>
 	<p>可以定义一个角度，而不用预定义方向（to bottom、to top、to right、to left、to bottom right，等等）</p>
-	<div id='grad3'></div>
+	<p>方向以正向上为0deg(度)，顺时针为正，逆时针为负，正向下为180deg(度)</p>
+	<div id='grad4'></div>
 	
 	<p><strong>注意：</strong> Internet Explorer 9 及之前的版本不支持渐变。</p>
 </body>	
