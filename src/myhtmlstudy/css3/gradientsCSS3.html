@@ -39,6 +39,23 @@
 			height:200px;
 			background:linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 		}
+		
+		#grad8{
+			height:200px;
+			background:repeating-linear-gradient(red, yellow 10%, green 20%);
+		}
+		
+		#grad9{
+			width:300px;
+			height:200px;
+			background:radial-gradient(red, yellow , green);
+		}
+		
+		#grad10{
+			width:300px;
+			height:200px;
+			background:radial-gradient(red 5%, yellow 15%, green 60%);
+		}
 	</style>
 </head>
 
@@ -54,7 +71,7 @@
 	
 	<h3>线性渐变 - 从左上角到右下角</h3>
 	<p>从左上角开始（到右下角）的线性渐变。起点是红色，慢慢过渡到蓝色</p>
-	<div id='grad3'></div>
+	<div id='grad3'></div> 
 	
 	<h3>线性渐变 - 自定义渐变方向</h3>
 	<p>可以定义一个角度，而不用预定义方向（to bottom、to top、to right、to left、to bottom right，等等）</p>
@@ -73,6 +90,20 @@
 	<p>使用 rgba() 函数来定义颜色结点，前三个参数表示颜色，最后一个参数范围0（透明）- 1（不透明）</p>
 	<div id='grad7'></div>
 	
+	<h3>线性渐变 - 重复的线性渐变</h3>
+	<p>使用repeating-linear-gradient() 函数用于重复线性渐变：</p>
+	<div id='grad8'></div>
+	
+	<h3>径向渐变 - 颜色结点均匀分布（默认情况下）</h3>
+	<p>默认情况下，渐变的中心是 center（表示在中心点），渐变的形状是 ellipse（表示椭圆形），渐变的大小是 farthest-corner（表示到最远的角落）</p>
+	<div id='grad9'></div>
+	
+	<h3>径向渐变 - 颜色结点不均匀分布</h3>
+	<p>颜色结点不均匀分布的径向渐变：</p>
+	<div id='grad10'></div>
+	
 	<p><strong>注意：</strong> Internet Explorer 9 及之前的版本不支持渐变。</p>
+	
+	
 </body>	
 </html>
