@@ -56,6 +56,18 @@
 			height:200px;
 			background:radial-gradient(red 5%, yellow 15%, green 60%);
 		}
+		
+		#grad11{
+			width:300px;
+			height:200px;
+			background:radial-gradient(circle, red, yellow, green);
+		}
+		
+		#grad12{
+			width:300px;
+			height:200px;
+			background:repeating-radial-gradient(red , yellow 10%, green 15%);
+		}
 	</style>
 </head>
 
@@ -101,6 +113,14 @@
 	<h3>径向渐变 - 颜色结点不均匀分布</h3>
 	<p>颜色结点不均匀分布的径向渐变：</p>
 	<div id='grad10'></div>
+	
+	<h3>径向渐变 - 设置形状</h3>
+	<p>shape 参数定义了形状。它可以是值 circle 或 ellipse。其中，circle 表示圆形，ellipse 表示椭圆形。默认值是 ellipse</p>
+	<div id='grad11'></div>
+	
+	<h3>径向渐变 - 重复的径向渐变</h3>
+	<p>repeating-radial-gradient() 函数用于重复径向渐变：</p>
+	<div id='grad12'></div>
 	
 	<p><strong>注意：</strong> Internet Explorer 9 及之前的版本不支持渐变。</p>
 	
