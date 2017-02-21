@@ -5,12 +5,41 @@
 	<title>菜鸟教程(runoob.com)</title>
 	<style>
 		h1{
-			text-shadow: 5px 5px 5px #FF0000;
+			text-shadow: 5px 5px 5px #FF0000;/* 四个参数分别为：水平阴影，垂直阴影，模糊的距离，以及阴影的颜色 */
+		}
+		
+		#shadow1{
+			width:300px;
+			height:200px;
+			background-color:yellow;
+			box-shadow:15px 5px 5px #888888;/* 四个参数分别为：水平阴影，垂直阴影，模糊的距离，以及阴影的颜色 */
+		}
+		
+		div.test{
+			white-space:nowrap; 
+			width:12em; 
+			overflow:hidden; 
+			border:1px solid #000000;
 		}
 	</style>
 <head>
 <body>
 	<h1>文本阴影 Text-shadow effect!</h1>
+	
+	<h3>盒子阴影</h3>
+	<p>盒子阴影可以用在各种卡片效果中，即box-shadow</p>
+	<div id='shadow1'></div>
+	
+	<h3>文本溢出<h3>
+	<p>当容器内的文本无法完全显示时，就出现文本溢出的现象</p>
+	<p>以下 div 容器内的文本无法完全显示，可以看到它被裁剪了。</p>
+	<p>div 使用 &quot;text-overflow:ellipsis&quot;:</p>
+	<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+	<p>div 使用 &quot;text-overflow:clip&quot;:</p>
+	<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+	<p>div 使用自定义字符串 &quot;text-overflow: &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
+	<div class="test" style="text-overflow:'>>';">This is some long text that will not fit in the box</div>
+
 
 	<p><b>注意:</b> Internet Explorer 9 以及更早版本的浏览器不支持 text-shadow属性.</p>
 </body>
