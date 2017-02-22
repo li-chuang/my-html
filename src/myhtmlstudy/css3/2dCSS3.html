@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>菜鸟教程(runoob.com)</title>
+	<style>
+		div{
+			width:100px;
+			height:75px;
+			background-color:red;
+			border:1px solid black;
+		}
+		
+		div#div2{
+			transform:translate(150px,10px); /* 依照给定的参数移动 */
+		}
+		
+		div#div3{
+			transform:rotate(30deg); /* 依照给定的角度旋转 */
+		}
+		
+		div#div4{
+			margin:100px;
+			transform:scale(2,3);/* scale（2,3）转变宽度为原来的大小的2倍，和其原始大小3倍的高度 */
+		}
+		
+		div#div5{
+			transform:skew(45deg, 10deg); /* 理解起来可以反着理解，Y轴偏离45度，X轴偏离10度 */
+										  /* skewX(<angle>);表示只在X轴(水平方向)倾斜 */
+										  /* skewY(<angle>);表示只在Y轴(垂直方向)倾斜 */
+		}
+		
+		div#div6{
+			transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+		}
+	</style>
+</head>
+
+<body>
+	<h1>斜拉(skew)，缩放(scale)，旋转(rotate)以及位移(translate)</h1>
+	<h2>以上这些，本质上都是应用的matrix()方法实现的，通过矩阵matrix,一样可以达到上面的效果</h2>
+
+	<h3>translate()方法</h3>
+	<p>translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动</p>
+	<div id='div1'>Hello. This is a DIV element.</div>
+	<div id=div2>Hello. This is a DIV element.</div>
+	
+	<h3>rotate()方法</h3>
+	<p>rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转</p>
+	<div id='div3'>Hello. This is a DIV element.</div>
+	
+	<h3>scale()方法</h3>
+	<p>scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数</p>
+	<div id='div4'>div 元素的宽度是原始大小的两倍，高度是原始大小的三倍。</div>
+	
+	<h3>skew() 方法</h3>
+	<p>分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜</p>
+	<div id='div5'>Hello. This is a DIV element.</div>
+	
+	<h3>matrix() 方法</h3>
+	<p>matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能</p>
+	<div id="div6">Hello. This is a DIV element.</div>
+	
+</body>
+</html>
