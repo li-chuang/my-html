@@ -16,15 +16,27 @@
 		}
 		
 		div.test{
-			white-space:nowrap; 
+			white-space:nowrap; /* 文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
 			width:12em; 
-			overflow:hidden; 
-			border:1px solid #000000;
+			overflow:hidden; /* 隐藏溢出 */
+			border:1px solid #000000;/* 黑色边框 */
 		}
 		
 		div.test:hover{
-			text-overflow:inherit;
-			overflow:visible;
+			text-overflow:inherit;/* inherit继承？？ */
+			overflow:visible; /* 显示溢出溢出 */
+		}
+		
+		#overflow1{
+			text-overflow:ellipsis;/* 显示省略符号来代表被修剪的文本，溢出的部分被省略号代替 */
+		}
+		
+		#overflow2{
+			text-overflow:clip;/* 修剪文本，溢出的部分直接没有了*/
+		}
+		
+		#overflow3{
+			text-overflow:'>>';/* 使用给定的字符串来代表被修剪的文本，溢出部分被指定的符号代替 */
 		}
 	</style>
 <head>
@@ -39,11 +51,11 @@
 	<p>当容器内的文本无法完全显示时，就出现文本溢出的现象</p>
 	<p>以下 div 容器内的文本无法完全显示，可以看到它被裁剪了。</p>
 	<p>div 使用 &quot;text-overflow:ellipsis&quot;:</p>
-	<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+	<div class="test" id='overflow1'>This is some long text that will not fit in the box</div>
 	<p>div 使用 &quot;text-overflow:clip&quot;:</p>
-	<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+	<div class="test" id='overflow2'>This is some long text that will not fit in the box</div>
 	<p>div 使用自定义字符串 &quot;text-overflow: &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
-	<div class="test" style="text-overflow:'>>';">This is some long text that will not fit in the box</div>
+	<div class="test" id='overflow3'>This is some long text that will not fit in the box</div>
 
 	<p><b>注意:</b> Internet Explorer 9 以及更早版本的浏览器不支持 text-shadow属性.</p>
 </body>
