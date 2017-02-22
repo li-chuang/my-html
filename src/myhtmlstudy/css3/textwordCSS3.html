@@ -38,6 +38,13 @@
 		#overflow3{
 			text-overflow:'>>';/* 使用给定的字符串来代表被修剪的文本，溢出部分被指定的符号代替 */
 		}
+		
+		p.wrap{
+			width:11em;
+			border:1px solid #000000;
+			word-wrap:break-word;/* 在长单词或 URL 地址内部进行换行 */
+		}
+		/* 有关换行的还有word-break等 */ 
 	</style>
 <head>
 <body>
@@ -56,6 +63,11 @@
 	<div class="test" id='overflow2'>This is some long text that will not fit in the box</div>
 	<p>div 使用自定义字符串 &quot;text-overflow: &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
 	<div class="test" id='overflow3'>This is some long text that will not fit in the box</div>
+	
+	<h3>换行规则</h3>
+	<p></p>
+	<p class="wrap"> This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
 
 	<p><b>注意:</b> Internet Explorer 9 以及更早版本的浏览器不支持 text-shadow属性.</p>
 </body>
