@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>菜鸟教程(runoob.com)</title>
+	<style>
+		#div1{
+			width:100px;
+			height:100px;
+			background-color:red;
+			transition:width 2s; /* 设定宽度变化的持续时间为2s */
+								 /* 不在这里设置，虽然也可以变化，但不会有过渡效果 */
+		}
+		
+		#div1:hover{  /* 鼠标放上去后，宽度变为300px */
+			width:300px;
+		}
+		
+		#div2{
+			width:100px;
+			height:100px;
+			background-color:yellow;
+			transition:width 2s,height 2s,transform 2s,background-color 2s;/* 按‘属性 时间’的规则设定即可 */
+		}
+		
+		#div2:hover{
+			width:300px;
+			height:300px;
+			background-color:red;
+			transform:rotate(180deg);
+		}
+	</style>
+</head>
+<body>
+
+	<h1>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果</h1>
+	<h3>重点有两个：1.指定要添加效果的CSS属性；2.指定效果的持续时间（默认为0，也就是没有变化）</h3>
+	
+	<div id='div1'>我是一个盒子</div>
+	
+	<h3>多项改变，添加的属性由逗号分隔</h3>
+	<div id='div2'>我是另一个盒子</div>
+
+	<p>鼠标移动到 div 元素上，查看过渡效果。</p>
+</body>
+</html>
