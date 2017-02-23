@@ -6,15 +6,28 @@
 	<style>
 		@keyframes myfirst
 		{
-			from {background:red;}
-			to {background:yellow;}
+			/* from {background:red;}
+			   to {background:yellow;} */
+			
+		/*	0%   {background:red;left:0px;top:0px;}
+			25%  {background:yellow;left:200px;top:0px;}
+			50%  {background:blue;left:200px;top:200px;}
+			75%  {background:green;left:0px;top:200px;}
+			100% {background:red;left:0px;top:0px;}  *//*为了得到最佳的浏览器支持，应该用百分比来表示进度*/
+			
+			0%   {background:red; left:0px; top:0px;}
+			25%  {background:yellow; left:200px; top:0px;transform:rotate(90deg);}
+			50%  {background:blue; left:200px; top:200px;transform:rotate(180deg);}
+			75%  {background:green; left:0px; top:200px;transform:rotate(270deg);}
+			100% {background:red; left:0px; top:0px;}  
 		}
 	
 		#div1{
-			width:200px;
-			height:200px;
+			width:100px;
+			height:100px;
 			background-color:red;
 			animation:myfirst 5s;/* 把 "myfirst" 动画捆绑到 div 元素，时长：5 秒（时间不可省略，默认是0，省略后就没法运行了） */
+			position:relative; /* 设定为相对位置 */
 		}
 	</style>
 </head>
