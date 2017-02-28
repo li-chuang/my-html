@@ -23,6 +23,16 @@
 			border:1em solid red;
 			float:left;
 		}
+
+		#div2{
+			margin:20px;
+			padding:10px;
+			width:150px; 
+			height:70px;
+			border:2px solid black;/* 这个是边框 */
+			outline:2px solid red; /* 这个是轮廓，轮廓是边框的外延 */
+			outline-offset:15px;/* 边框边缘之外 15 像素处的轮廓 */
+		}
 	</style>
  </head>
  <body>
@@ -32,8 +42,14 @@
 	
 	<h3>box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容</h3>
 	<div class="container">
-	<div class="box">这个 div 占据了左边的一半。.</div>
-	<div class="box">这个 div 占据了右边的一半。</div>
-</div>
+		<div class="box">这个 div 占据了左边的一半。.</div>
+		<div class="box">这个 div 占据了右边的一半。</div>
+	</div>
+	
+	<br><br><br>
+	<h3>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓</h3>
+	<p><b>注意:</b> Internet Explorer 不兼容 outline-offset属性.</p>
+	<div id='div2'>这个 div有一个边框边缘之外 15 像素处的轮廓。</div>
+	
  </body>
  </html>
