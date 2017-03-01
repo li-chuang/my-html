@@ -16,6 +16,14 @@
 			border-radius:50%;/* 值和百分比都是用来设置圆角的半径，上例表示圆角半径为8px，此例表示圆角半径为对应长宽的50% */
 							  /* 如果此处长宽一致（400px），且圆角半径为50%，则最终构成了一个圆（半径200px） */
 		}
+		
+		#img3{
+			width:400px;
+			height:300px;
+			border:1px solid #ddd;/* 搞不明白为什么叫缩略图，实际上就是加了一层边框 */
+			border-radius:4px;
+			padding:5px;
+		}
 	</style>
 </head>
 	
@@ -26,6 +34,11 @@
 	<img id='img1' src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" >	
 	<p>使用 border-radius 属性来创建椭圆形图片</p>
 	<img id='img2' src='http://www.runoob.com/try/demo_source/paris.jpg' alt='Paris'>
+	
+	<h2>缩略图</h2>
+	<p>我们使用 border 属性来创建缩略图。</p>
+	<img id='img3' src='http://www.runoob.com/try/demo_source/paris.jpg' alt="Paris">
+	
 </body>
 
 </html>
