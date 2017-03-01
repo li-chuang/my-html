@@ -7,18 +7,25 @@
 		#img1{
 			width:400px;
 			height:300px;
-			border-radius:8px;
+			border-radius:8px;/* border-radius 属性是一个简写属性，用于设置四个 border-*-radius 属性 */
 		}
 		
+		#img2{
+			width:400px;
+			height:300px;
+			border-radius:50%;/* 值和百分比都是用来设置圆角的半径，上例表示圆角半径为8px，此例表示圆角半径为对应长宽的50% */
+							  /* 如果此处长宽一致（400px），且圆角半径为50%，则最终构成了一个圆（半径200px） */
+		}
 	</style>
 </head>
 	
 <body>
 
-	<h2>圆角图片</h2>
+	<h2>圆角图片</h2>	
 	<p>使用 border-radius 属性来创建圆角图片:</p>
-
-	<img id='img1' src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" >
+	<img id='img1' src="http://www.runoob.com/try/demo_source/paris.jpg" alt="Paris" >	
+	<p>使用 border-radius 属性来创建椭圆形图片</p>
+	<img id='img2' src='http://www.runoob.com/try/demo_source/paris.jpg' alt='Paris'>
 </body>
 
 </html>
