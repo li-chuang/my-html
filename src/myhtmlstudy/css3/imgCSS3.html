@@ -24,6 +24,25 @@
 			border-radius:4px;
 			padding:5px;
 		}
+		
+		.container{
+			position:relative;
+			width:400px;
+			height:300px;
+		}
+		
+		#img4{
+			width:100%;
+			height:auto;
+			opacity:0.3
+		}
+		
+		#topleft{
+			position:absolute;
+			left:16px;
+			top:8px;
+			font-size:18px;
+		}
 	</style>
 </head>
 	
@@ -38,8 +57,13 @@
 	<h2>缩略图</h2>
 	<p>我们使用 border 属性来创建缩略图。</p>
 	<img id='img3' src='http://www.runoob.com/try/demo_source/paris.jpg' alt="Paris">
-
 	
+	<h2>图片文本</h2>	
+	<p>在图片左上角添加文本信息:</p>
+	<div class="container">
+		<img id='img4' src='http://www.runoob.com/try/demo_source/paris.jpg' alt="Paris">
+		<div id='topleft'>左上角</div>
+	</div>
 </body>
 
 </html>
