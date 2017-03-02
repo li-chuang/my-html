@@ -34,13 +34,42 @@
 		#img4{
 			width:100%;
 			height:auto;
-			opacity:0.3
+			opacity:0.3; /* 此处设置透明度 */
 		}
 		
 		#topleft{
-			position:absolute;
+			position:absolute;/* 只有设置了绝对位置，与边界的距离left,top等才有效 */
 			left:16px;
 			top:8px;
+			font-size:18px;
+		}
+		
+		#topright{
+			position:absolute;
+			right:16px;
+			top:8px;
+			font-size:18px;			
+		}
+		
+		#center{
+			position:absolute;
+			top:50%;
+			width:100%;
+			text-align:center;
+			font-size:18px;
+		}
+		
+		#bottomleft{
+			position:absolute;
+			left:16px;
+			bottom:8px;
+			font-size:18px;
+		}
+		
+		#bottomright{
+			position:absolute;
+			right:16px;
+			bottom:8px;
 			font-size:18px;
 		}
 	</style>
@@ -63,6 +92,10 @@
 	<div class="container">
 		<img id='img4' src='http://www.runoob.com/try/demo_source/paris.jpg' alt="Paris">
 		<div id='topleft'>左上角</div>
+		<div id='topright'>右上角</div>
+		<div id='center'>居中</div>
+		<div id='bottomleft'>左下角</div>
+		<div id='bottomright'>右下角</div>
 	</div>
 </body>
 
