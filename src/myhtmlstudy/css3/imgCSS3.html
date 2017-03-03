@@ -91,12 +91,24 @@
 		.grayscale {
 			filter: grayscale(100%);/* 灰度图像,此处修改图片的颜色为黑白 (100% 灰度) */
 		}
-		.huerotate {-webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);}
-		.invert {-webkit-filter: invert(100%);filter: invert(100%);}
-		.opacity {-webkit-filter: opacity(50%);filter: opacity(50%);}
-		.saturate {-webkit-filter: saturate(7); filter: saturate(7);}
-		.sepia {-webkit-filter: sepia(100%);filter: sepia(100%);}
-		.shadow {-webkit-filter: drop-shadow(8px 8px 10px green);filter: drop-shadow(8px 8px 10px green);}
+		.huerotate {
+			filter: hue-rotate(180deg);/* 设定图像会被调整的色环角度值 */
+		}
+		.invert {
+			filter: invert(100%);/* 反转输入图像（如255,255,255，反转后就是0,0,0，即对应的和值是255） */
+		}
+		.opacity {
+			filter: opacity(50%);/* 透明度 */
+		}
+		.saturate {
+			filter: saturate(7);/* 图像饱和度，即彩光与白光的比值（也即色彩的纯度），白色饱和度为0，没色彩 */
+		}
+		.sepia {
+			filter: sepia(100%);/* 转换为深褐色 */
+		}
+		.shadow {
+			filter: drop-shadow(8px 8px 10px green);/* 阴影效果 */
+		}
 	</style>
 </head>
 	
@@ -137,11 +149,17 @@
 		<img class="contrast" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
 		<p>将图像转换为灰度图像。值定义转换的比例。值为100%则完全转为灰度图像，值为0%图像无变化。若未设置，值默认是0</p>
 		<img class="grayscale" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+		<p>给图像应用色相旋转。"angle"一值设定图像会被调整的色环角度值。值为0deg，则图像无变化。若值未设置，默认值是0deg。该值虽然没有最大值，超过360deg的值相当于又绕一圈</p>
 		<img class="huerotate" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+		<p>反转输入图像。值定义转换的比例。100%的价值是完全反转。值为0%则图像无变化。值在0%和100%之间，则是效果的线性乘子。 若值未设置，值默认是0</p>
 		<img class="invert" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+		<p>转化图像的透明程度。值定义转换的比例。值为0%则是完全透明，值为100%则图像无变化。默认为1</p>
 		<img class="opacity" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+		<p>转换图像饱和度。值定义转换的比例。值为0%则是完全不饱和，值为100%则图像无变化。默认是1</p>
 		<img class="saturate" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+		<p>将图像转换为深褐色。值定义转换的比例。值为100%则完全是深褐色的，值为0%图像无变化。默认为0</p>
 		<img class="sepia" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+		<p>给图像设置一个阴影效果。阴影是合成在图像下面，可以有模糊度的，可以以特定颜色画出的遮罩图的偏移版本</p>
 		<img class="shadow" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
 	</div>
 	
