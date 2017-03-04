@@ -6,7 +6,7 @@
 	<style>
 		.button{
 			background-color:#4CAF50;/* 使用 background-color 属性来设置按钮颜色 */
-			border:none;
+			border:none;/* 2px solid red;使用 border 属性设置按钮边框颜色 */
 			color:white;
 			padding:15px 32px;
 			text-align:center;
@@ -16,15 +16,77 @@
 			margin: 4px 2px;
 			cursor: pointer;
 			border-radius:8px;/* 使用 border-radius 属性来设置圆角按钮 */
+			transition-duration:0.4s;/* 设置动画持续的时间，也即是 "hover" 效果的速度 */
+		}
+		
+		.button1 {
+			background-color: white; /* 背景白色，悬停后变成绿色 */
+			color: black; /* 字体为黑色，悬停后变为白色 */
+			border: 2px solid #4CAF50; /* 设置边框，悬停后没有边框 */
+		}
+
+		.button1:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		.button2 {
+			background-color: white; 
+			color: black; 
+			border: 2px solid #008CBA;
+		}
+
+		.button2:hover {
+			background-color: #008CBA;
+			color: white;
+		}
+
+		.button3 {
+			background-color: white; 
+			color: black; 
+			border: 2px solid #f44336;
+		}
+
+		.button3:hover {
+			background-color: #f44336;
+			color: white;
+		}
+
+		.button4 {
+			background-color: white;
+			color: black;
+			border: 2px solid #e7e7e7;
+		}
+
+		.button4:hover {background-color: #e7e7e7;}
+
+		.button5 {
+			background-color: white;
+			color: black;
+			border: 2px solid #555555;
+		}
+
+		.button5:hover {
+			background-color: #555555;
+			color: white;
 		}
 	</style>
 </head>
 <body>
-	<h2>按钮button</h2>
-	
+	<h2>按钮button</h2>	
 	<button>默认按钮</button>
 	<a href='#' class='button'>链接按钮</a>
 	<button class='button'>正常按钮</button>
 	<input type='button' class='button' value='输入框按钮'/>
+	
+	<h2>鼠标悬停按钮</h2>
+	<p>我们可以使用 :hover 选择器来修改鼠标悬停在按钮上的样式。</p>
+	<p><strong>提示:</strong> 我们可以使用 <code>transition-duration</code> 属性来设置 "hover" 效果的速度:</p>
+	<button class="button button1">Green</button>
+	<button class="button button2">Blue</button>
+	<button class="button button3">Red</button>
+	<button class="button button4">Gray</button>
+	<button class="button button5">Black</button>
+
 </body>
 </html>
