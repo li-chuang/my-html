@@ -63,5 +63,32 @@
 	<img id='myimg' onclick='changeImage()' src='http://www.runoob.com/images/pic_bulboff.gif' />
 	<p>点击灯泡就可以打开或关闭这盏灯</p>
 	
+	<h2>JavaScript：改变 HTML 样式</h2>
+	<script>
+		function myExample(){
+			x = document.getElementById('example');
+			if(x.style.color.match('red')){
+				x.style.color='black';
+			} else {
+				x.style.color='red';
+			}
+		}
+	</script>
+	<p id='example'>JavaScript 能改变 HTML 元素的样式。</p>
+	<button type='button' onclick='myExample()'>点我改变颜色</button>
+	
+	<h2>JavaScript：验证输入 </h2>
+	<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+	<script>
+		function check(){
+			var x = document.getElementById('checkNum').value;
+			if(x==''|| isNaN(x)){
+				alert('输入的不是数字！！');
+			}
+		}
+	</script>
+	<input type='text' id='checkNum' />
+	<button button='button' onclick='check()'>点我验证！</button>
+	
 </body>
 </html>
