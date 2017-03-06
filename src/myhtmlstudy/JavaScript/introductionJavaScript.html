@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的JavaScript</title>
+</head>
+<body>
+
+	<h2>JavaScript：直接写入 HTML 输出流</h2>
+	<script>
+		document.write('<h1>这是一个标题</h1>');
+		document.write('<p>这是一个<strong>段落</strong></p>');
+	</script>
+	<p>
+	您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+	如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+	</p>
+</body>
+</html>
