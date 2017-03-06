@@ -3,6 +3,23 @@
 <head>
 	<meta charset='utf-8'></meta>
 	<title>我的JavaScript</title>
+	<style>
+		button{
+			background-color:#4CAF50;
+			color:white;
+			padding:15px 32px;
+			border-radius:6px;
+			font-size:16px;
+			margin:4px 2px;
+			text-align:center;
+			transition-duration:1s;
+		}
+		
+		#myimg{
+			width:100px;
+			height:180px;
+		}
+	</style>
 </head>
 <body>
 
@@ -15,5 +32,35 @@
 	您只能在 HTML 输出流中使用 <strong>document.write</strong>。
 	如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
 	</p>
+	
+	<br/>
+	<h2>JavaScript：对事件的反应</h2>
+	<p>JavaScript 能够对事件作出反应。比如对按钮的点击：</p>
+	<button type='button' onclick='alert("欢迎！！")'>点我！</button>
+	
+	<br/>
+	<h2>JavaScript：改变 HTML 内容</h2>
+	<p id="demo">JavaScript 能改变 HTML 元素的内容。</p>
+	<script>
+		function myFunction(){
+			x = document.getElementById('demo');
+			x.innerHTML = 'Hello JavaScript!'
+		}
+	</script>
+	<button type='button' onclick='myFunction()'>点击这里</button>
+	<script>
+		function changeImage(){
+			element = document.getElementById('myimg');
+			if(element.src.match('bulboff')){
+				element.src='http://www.runoob.com/images/pic_bulbon.gif'
+			} else {
+				element.src='http://www.runoob.com/images/pic_bulboff.gif'
+			}
+		}
+	</script>
+	<h2>JavaScript：改变 HTML 图像</h2>
+	<img id='myimg' onclick='changeImage()' src='http://www.runoob.com/images/pic_bulboff.gif' />
+	<p>点击灯泡就可以打开或关闭这盏灯</p>
+	
 </body>
 </html>
