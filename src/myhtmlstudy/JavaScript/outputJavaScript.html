@@ -20,7 +20,7 @@
 <body>
 	<h2>JavaScript输出</h2>
 	<p>JavaScript 可以通过不同的方式来输出数据:</p>
-	<ol>	/* ol是有序列表，ul是无序列表 */
+	<ol>	 <!-- ol是有序列表，ul是无序列表 -->
 		<li>使用 window.alert() 弹出警告框</li>
 		<li>使用 document.write() 方法将内容写到 HTML 文档中</li>
 		<li>使用 innerHTML 写入到 HTML 元素</li>
@@ -35,5 +35,38 @@
 		}
 	</script>
 	<button type='button' onclick='sum()'>结果</button>
+	
+	<h2>操作 HTML 元素</h2>
+	<p>用 "id" 属性来标识 HTML 元素，并 innerHTML 来获取或插入元素内容</p>
+	<script>
+		function change(){
+			x = document.getElementById('demo1');
+			x.innerHTML='此段落已经被修改'
+			x.style.color='red';
+		}
+	</script>
+	<p id='demo1'>修改此段落</p>
+	<button type='button' onclick='change()'>点我修改</button>
+	
+	<h2>写到 HTML 文档</h2>
+	<p>使用 document.write() 向文档输出写内容</p>
+	<p>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖</p>
+	<script>
+		document.write('向文档输出写内容！！');
+		function load(){
+			document.write('覆盖整个文档！！');
+		}
+	</script>
+	<br/>
+	<button type='button' onclick='load()'>点我覆盖</button>
+	
+	<h2>写到控制台<h2>
+	<p>使用 console.log() 方法在浏览器中显示 JavaScript 值</p>
+	<script>
+		a = 5;
+		b = 7;
+		c = a + b;
+		console.log(c);
+	</script>
 </body>
 </html>
