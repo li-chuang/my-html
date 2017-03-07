@@ -1,0 +1,39 @@
+<!DOCTYOE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的JavaScript</title>
+	<style>
+		button{
+			background-color:#4CAF50;
+			color:white;
+			padding:15px 32px;
+			margin:4px 2px;
+			border-radius:6px;
+			font-size:16px;
+			text-align:center;
+			text-duration:0.3s;
+			
+		}
+	</style>
+</head>
+<body>
+	<h2>JavaScript输出</h2>
+	<p>JavaScript 可以通过不同的方式来输出数据:</p>
+	<ol>	/* ol是有序列表，ul是无序列表 */
+		<li>使用 window.alert() 弹出警告框</li>
+		<li>使用 document.write() 方法将内容写到 HTML 文档中</li>
+		<li>使用 innerHTML 写入到 HTML 元素</li>
+		<li>使用 console.log() 写入到浏览器的控制台</li>
+	</ol>
+	
+	<h2>使用 window.alert()</h2>
+	<p>以弹出警告框来显示信息</p>
+	<script>
+		function sum(){
+			window.alert(5+6);
+		}
+	</script>
+	<button type='button' onclick='sum()'>结果</button>
+</body>
+</html>
