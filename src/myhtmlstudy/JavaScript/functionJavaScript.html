@@ -44,10 +44,15 @@
 			return new Number(x) + new Number(y);<!-- 假如不进行数字转换，将默认进行字符拼接 -->
 		}
 		function result(){
+			reset();
 			var lang = document.getElementById('result').innerHTML;
 			document.getElementById('result').innerHTML = lang + add();<!-- 返回值可以直接保存为变量，也可以直接使用 -->
 		}
+		function reset(){
+			document.getElementById('result').innerHTML='结果：';
+		}
 	</script>
 	<button type='button' onclick='result()'>计算</button>
+	<button type='button' onclick='reset()'>清除</button>
 </body>
 <html>
