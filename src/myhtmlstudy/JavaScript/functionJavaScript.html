@@ -39,12 +39,12 @@
 	<p id='result'>结果：</p>
 	<script>
 		function add(){
-			x = document.getElementById('add1').value;
-			y = document.getElementById('add2').value;
+			var x = document.getElementById('add1').value;<!-- 使用var的是局部变量 -->
+			var y = document.getElementById('add2').value;
 			return new Number(x) + new Number(y);<!-- 假如不进行数字转换，将默认进行字符拼接 -->
 		}
 		function result(){
-			lang = document.getElementById('result').innerHTML;
+			var lang = document.getElementById('result').innerHTML;
 			document.getElementById('result').innerHTML = lang + add();<!-- 返回值可以直接保存为变量，也可以直接使用 -->
 		}
 	</script>
