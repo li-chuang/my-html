@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的HTML</title>
+	<style>
+		button{
+			background-color:#4CAF50;
+			color:white;
+			padding:15px 32px;
+			margin:4px 2px;
+			border-radius:8px;
+			font-size:16px;
+			text-align;center;
+			transition-duration:0.3s;
+		}
+		
+		#add1,#add2,#div1{
+			height:30px;
+		}
+		
+	</style>
+</head>
+<body>
+	<h2>调用带参数的函数</h2>
+	<p>变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递的参数的给定的值，以此类推</p>
+	<p>点击这个按钮，来调用带参数的函数。</p>
+	<script>
+		function myFunction(name, job){
+			alert('Welcome '+ name +', the '+ job);
+		}
+	</script>
+	<button type='button' onclick='myFunction("Harry Potter","Wizard")'>点击这里</button>
+	
+	<h2>带有返回值的函数</h2>
+	<p>在使用 return 语句时，函数会停止执行，并返回指定的值</p>
+	<input type='text' id='add1'></input> + 
+	<input type='text' id='add2'></input> <br>
+	<p id='result'>结果：</p>
+	<script>
+		function add(){
+			x = document.getElementById('add1').value;
+			y = document.getElementById('add2').value;
+			return new Number(x) + new Number(y);<!-- 假如不进行数字转换，将默认进行字符拼接 -->
+		}
+		function result(){
+			lang = document.getElementById('result').innerHTML;
+			document.getElementById('result').innerHTML = lang + add();<!-- 返回值可以直接保存为变量，也可以直接使用 -->
+		}
+	</script>
+	<button type='button' onclick='result()'>计算</button>
+</body>
+<html>
