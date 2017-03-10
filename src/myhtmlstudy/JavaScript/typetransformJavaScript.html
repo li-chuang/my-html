@@ -38,8 +38,19 @@
 			"new Date() 的构造函数：" + new Date().constructor + "<br>" + 
 			"function(){} 的构造函数：" + function(){}.constructor + "<br>" ;//+
 			//"myCar 的构造函数：" + myCar.constructor + "<br>" ;// 	后面的两个还没有生成对象，即未定义，也不存在构造方法
-			//"null 的构造函数：" + null.constructor ;
-					
+			//"null 的构造函数：" + null.constructor ;					
+	</script>
+	
+	<p>使用 constructor 属性来检查对象的类型</p>
+	<p>使用 constructor 属性来查看是对象是否为数组 (包含字符串 "Array")</p>
+	<p id='demo3'></p>
+	<script>
+		var fruit = ['Banana','Orange','Apple','Mongo'];
+		document.getElementById('demo3').innerHTML=isArray(fruit);
+		function isArray(myArray){
+			return myArray.constructor.toString().indexOf('Array') >-1 //用来判断传入的参数的类型
+		}
+		
 	</script>
 </body>
 </html>
