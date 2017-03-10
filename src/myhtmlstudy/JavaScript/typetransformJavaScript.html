@@ -13,16 +13,33 @@
 	<script>
 		document.getElementById('demo1').innerHTML=
 			"'John' 的类型：" + typeof 'John' + "<br>" +
-			"3.14 的类型" + typeof 3.14 + "<br>" +
-			"NaN 的类型" + typeof NaN + "<br>" +
-			"false 的类型" + typeof false + "<br>" +
-			"[1,2,3,4] 的类型" + typeof [1,2,3,4] + "<br>" +
-			"{name:'Jone',age:34} 的类型" + typeof {name:'John',age:34} + "<br>" +
-			"new Date() 的类型" + typeof new Date() + "<br>" + 
-			"function(){} 的类型" + typeof function(){} + "<br>" +
-			"myCar 的类型" + typeof myCar + "<br>" +
-			"null 的类型" + typeof null ;
-			
+			"3.14 的类型：" + typeof 3.14 + "<br>" +
+			"NaN 的类型：" + typeof NaN + "<br>" +
+			"false 的类型：" + typeof false + "<br>" +
+			"[1,2,3,4] 的类型：" + typeof [1,2,3,4] + "<br>" +
+			"{name:'Jone',age:34} 的类型：" + typeof {name:'John',age:34} + "<br>" +
+			"new Date() 的类型：" + typeof new Date() + "<br>" + 
+			"function(){} 的类型：" + typeof function(){} + "<br>" +
+			"myCar 的类型：" + typeof myCar + "<br>" +
+			"null 的类型：" + typeof null ;			
+	</script>
+	
+	<h3>constructor 属性</h3>
+	<p>constructor 属性返回所有 JavaScript 变量的构造函数。</p>
+	<p id='demo2'></p>
+	<script>
+		document.getElementById('demo2').innerHTML= 
+			"'John' 的构造函数：" + 'John'.constructor + "<br>" +
+			"3.14 的构造函数：" + (3.14).constructor + "<br>" +
+			"NaN 的构造函数：" + NaN.constructor + "<br>" +
+			"false 的构造函数：" + false.constructor + "<br>" +
+			"[1,2,3,4] 的构造函数：" + [1,2,3,4].constructor + "<br>" +
+			"{name:'Jone',age:34} 的构造函数：" + {name:'John',age:34}.constructor + "<br>" +
+			"new Date() 的构造函数：" + new Date().constructor + "<br>" + 
+			"function(){} 的构造函数：" + function(){}.constructor + "<br>" +
+			"myCar 的构造函数：" + myCar.constructor + "<br>" +
+			"null 的构造函数：" + null.constructor ;
+					
 	</script>
 </body>
 </html>
