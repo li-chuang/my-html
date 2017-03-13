@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的HTML</title>
+</head>
+<body>
+
+	<h2></h2>
+	<p></p>
+	<input id='id1' type='number' min='100' max='300' required></input>
+	<button type='button' onclick='myValidate()'>验证</button>
+	<p id='demo1'></p>
+	<script>
+		function myValidate(){
+			var x = document.getElementById('id1');
+			if(x.checkValidity() == false){
+				document.getElementById('demo1').innerHTML=x.validationMessage;
+			}
+		}
+	</script>
+<body>
+</html>
