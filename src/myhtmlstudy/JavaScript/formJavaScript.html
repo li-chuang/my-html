@@ -40,5 +40,14 @@
 	<button type='button' onclick='checkNumber()'>点我</button>
 	<p id='demo1'></p>
 	
+	<h2>HTML 表单自动验证</h2>
+	<p>如果表单字段 (fname) 的值为空, required 属性会阻止表单提交</p>
+	<form name='required' action='hello'.onsubmit='' method='post'>
+		<input type='text' name='fname' required></input>
+		<input type='submit' value='点我'></input>
+	</form>
+	<p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息。注意：required是浏览器级别的</p>
+	
+	
 </body>
 </html>
