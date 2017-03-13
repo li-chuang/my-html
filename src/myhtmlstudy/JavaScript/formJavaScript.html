@@ -21,5 +21,24 @@
 		<input type='submit' value='提交'></input>		
 	</form>
 	
+	<h2>avaScript 验证输入的数字</h2>
+	<p>请输入 1 到 10 之间的数字：</p>
+	<script>
+		function checkNumber(){
+			var x = document.getElementById('number').value;//注意：从input中获取值为value,而从HTML代码中获取值为innerHTML
+			if(isNaN(x) || x<1 || x>10){
+				alert('输入错误！！');
+				text = '输入错误！！';
+			} else {
+				alert('输入正确 ' + x);
+				text = '输入正确!!'
+			}
+			document.getElementById('demo1').innerHTML=text;
+		}
+	</script>
+	<input type='text' id='number'></input>
+	<button type='button' onclick='checkNumber()'>点我</button>
+	<p id='demo1'></p>
+	
 </body>
 </html>
