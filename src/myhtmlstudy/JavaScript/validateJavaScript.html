@@ -8,15 +8,25 @@
 
 	<h2></h2>
 	<p></p>
-	<input id='id1' type='number' min='100' max='300' required></input>
+	<input id='id1' type='number' min='100' max='300' required></input><!-- required表示这个输入需要验证，min与max限定输入数据的最大值与最小值 -->
 	<button type='button' onclick='myValidate()'>验证</button>
 	<p id='demo1'></p>
 	<script>
 		function myValidate(){
 			var x = document.getElementById('id1');
-			if(x.checkValidity() == false){
-				document.getElementById('demo1').innerHTML=x.validationMessage;
+			var text = '';
+			if(x.checkValidity() == false){//如果 input 元素中的数据是合法的则返回 true，否则返回 false
+				x.setCustomValidity('这是自己设定的提示语句！！');//设置 input 元素的 validationMessage 属性，用于自定义错误提示信息的方法
+				text = x.validationMessage;// validattionMessage为浏览器错误提示信息,一般是浏览器默认的提示信息，也可以自己设定
 			}
+			if(x.validity.rangeOverflow){// 如果元素的值大于设置的最大值,则返回true
+				text = '你输入的数字太大了';
+			}else if(x.validity.rangeUnderflow){// 如果元素的值小于设置的最小值，则返回true
+				text = '你输入的数字太小了';
+			}else {
+				text = '输入正确！';
+			}
+			document.getElementById('demo1').innerHTML=text;
 		}
 	</script>
 <body>
