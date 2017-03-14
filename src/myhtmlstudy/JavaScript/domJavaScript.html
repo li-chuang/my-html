@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'><meta>
+	<title></title>
+</head>
+<body>
+	<h2>创建新的 HTML 元素</h2>
+	<div id='div1'>
+		<p id='p1'>这是一个段落。</p>
+		<p id='p2'>这是另外一个段落。</p>
+	</div>
+	<script>
+		var para = document.createElement('p');//创建一个p标签元素
+		var node = document.createTextNode('这是一个新段落。');//创建文本元素
+		para.appendChild(node);//向 <p> 元素追加这个文本节点
+		
+		var element = document.getElementById('div1');//向一个已有的元素追加这个新元素
+		element.appendChild(para);
+	</script>
+	
+	<h2>删除已有的 HTML 元素</h2>
+	<div id='div2'>
+		<p id='p3'>这是一个段落。</p>
+		<p id='p4'>这是另外一个段落。</p>
+	</div>
+	<script>
+		var child = document.getElementById('p4');
+		var parent = document.getElementById('div2');
+		parent.removeChild(child);// DOM 需要清楚您需要删除的元素，以及它的父元素，不然无法删除
+		
+		var child=document.getElementById("p3");
+		child.parentNode.removeChild(child);// 这是常用的解决方案：找到您希望删除的子元素，然后使用其 parentNode 属性来找到父元素
+	</script>
+</body>
+</html>
