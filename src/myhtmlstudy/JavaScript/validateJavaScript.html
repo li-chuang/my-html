@@ -6,10 +6,11 @@
 </head>
 <body>
 
-	<h2></h2>
+	<h2>用最大最小值进行验证</h2>
 	<p></p>
 	<input id='id1' type='number' min='100' max='300' required></input><!-- required表示这个输入需要验证，min与max限定输入数据的最大值与最小值 -->
 	<button type='button' onclick='myValidate()'>验证</button>
+	<p>注意：checkValidity()与setCustomValidity()都是input对象的方法，validity是对象的属性，在它下面还有更低一级的属性，一般都是boolean类型的</p>
 	<p id='demo1'></p>
 	<script>
 		function myValidate(){
@@ -27,6 +28,21 @@
 				text = '输入正确！';
 			}
 			document.getElementById('demo1').innerHTML=text;
+		}
+		
+	</script>
+	
+	<h2>用pattern匹配进行验证</h2>
+	<input id='id2' type='text' pattern='^\d{4,11}$' placeholder='请输入4-11位数字！' required></input>
+	<button type='button' onclick='checkNumber()'>点我测试</button>
+	<p id='demo2'></p>
+	<script>
+		function checkNumber(){
+			var x= document.getElementById('id2');
+			if(x.validity.patternMismatch == true){
+				x.setCustomValidity('格式不正确，正确格式为：4-11位数字！');
+			}
+			document.getElementById('demo2').innerHTML=x.validationMessage;
 		}
 	</script>
 <body>
