@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的jQuery</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#hide').click(function(){
+				$('p').hide(1000);
+			});
+		
+			$('#show').click(function(){
+				$('p').show(1000);
+			});
+			
+			$('#toggle').click(function(){
+				$('p').toggle(500);
+			});
+			
+		});
+	</script>
+</head>
+
+<body>
+	<h2>hide隐藏与show显示</h2>
+	<p>$(selector).hide(speed,callback)与$(selector).show(speed,callback)</p>
+	<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒</p>
+	<p>可选的 callback 参数是隐藏或显示完成后所执行的函数名称</p>
+	<button id="hide">隐藏</button>
+	<button id="show">显示</button>
+	<p>如果你点击“隐藏” 按钮，我将会消失。</p>
+	
+	
+	<h2>toggle()切换</h2>
+	<p>使用 toggle() 方法来切换 hide() 和 show() 方法</p>
+	<p>toggle()的参数与用法都与hide(),show()一致</p>
+	<button id="toggle">切换</button>
+</body>
+</html>
