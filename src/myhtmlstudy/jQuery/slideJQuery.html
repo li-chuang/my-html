@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的JQuery</title>
+	<script src='https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script>
+		$(document).ready(function(){ //这里出过错，document外面的应该是小括号，不要随手写成了大括号
+			$('#flip').click(function(){
+				$('#panel').slideDown('slow');
+			});
+		});
+	</script>
+	<style>
+		#flip,#panel{
+			padding:5px;
+			text-align:center;
+			background-color:#e5eecc;
+			border:1px solid #c3c3c3;
+		}
+		
+		#panel{
+			padding:50px;
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<h2>slideDown() 方法,向下滑动</h2>
+	<p>$(selector).slideDown(speed,callback);速度可以取"slow"、"fast" 或毫秒</p>
+	<div id="flip">点我滑下面板</div>
+	<div id="panel">Hello world!</div>
+	
+	<h2>slideUp()以及slideToggle()都与slideDown类似</h2>
+</body>
+</html>
