@@ -22,7 +22,25 @@
 		#div3{
 			width:80px;
 			height:80px;
-			display:none;
+		display:none;
+			background-color:blue;
+		}
+		
+		#div4{
+			width:80px;
+			height:80px;
+			background-color:red;
+		}
+		
+		#div5{
+			width:80px;
+			height:80px;
+			background-color:green;
+		}
+		
+		#div6{
+			width:80px;
+			height:80px;
 			background-color:blue;
 		}
 	</style>
@@ -31,7 +49,13 @@
 			$('#btnin').click(function(){
 				$('#div1').fadeIn();
 				$('#div2').fadeIn('slow');<!-- slow,fast等需要用括号包起来 -->
-				$('#div3').fadeIn(3000);
+				$('#div3').fadeIn(3000);				
+			});
+			
+			$('#btnto').click(function(){
+				$('#div4').fadeTo('slow',0.15);
+				$('#div5').fadeTo('fast',0.45);
+				$('#div6').fadeTo(3000,0.85);
 			});
 		});
 	</script>
@@ -48,6 +72,16 @@
 	<div id='div1'></div><br>
 	<div id='div2'></div><br>
 	<div id='div3'></div>
+	
+	<h2> fadeOut()以及fadeToggle() 与上面的类似，就不再做特别说明</h2>
+	
+	<h2>fadeTo() 方法</h2>
+	<p>fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）</p>
+	<button id='btnto'>点击渐变不透明</button>
+	<br><br>
+	<div id='div4'></div><br>
+	<div id='div5'></div><br>
+	<div id='div6'></div>
 	
 
 </body>
