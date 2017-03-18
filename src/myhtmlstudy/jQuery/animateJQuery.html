@@ -2,13 +2,25 @@
 <html>
 <head>
 	<meta charset='utf-8'></meta>
-	<title>我的JQuery<title>
+	<title>我的JQuery</title>
 	<script src='https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
 	<script>
-	
+		$(document).ready(function(){
+			$('button').click(function(){
+				var div = $('#div1');
+				div.animate({left:100px,opacity:0.6,widht:200px,height:400px},'slow');
+				div.animate({font-size:3em},'slow');
+				//div.animate(right:100px,);
+			});
+		});
 	</script>
 	<style>
-		
+		#div1{
+			width:100px;
+			height:100px;
+			background-color:#98bf21;
+			position:absolute;
+		}
 	</style>
 </head>
 <body>
@@ -17,11 +29,11 @@
 	<p>必需的 params 参数定义形成动画的 CSS 属性,多个操作之间用逗号分隔</p>
 	<p>可以形成动画队列，多个动画之间依次执行</p>
 	
-	<button>开始动画</button>
-	<div id='div1'>HELLO</div>
-	
 	<p>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
 		如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!</p>
+		
+	<button>开始动画</button><br><br>
+	<div id='div1'>HELLO</div>	
 	
 </body>
 </html>
