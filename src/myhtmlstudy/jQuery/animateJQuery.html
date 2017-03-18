@@ -8,8 +8,8 @@
 		$(document).ready(function(){
 			$('button').click(function(){
 				var div = $('#div1');
-				div.animate({left:100px,opacity:0.6,widht:200px,height:400px},'slow');
-				div.animate({font-size:3em},'slow');
+				div.animate({left:'100px',opacity:'0.6',widht:'400px',height:'200px'},'slow');//key-value中值的部分需要用括号括起来
+				div.animate({fontSize:'3em'},'slow');// animate() 方法可以用来操作所有 CSS 属性，但写法要注意，要用驼峰写法，中间的横线去掉
 				//div.animate(right:100px,);
 			});
 		});
