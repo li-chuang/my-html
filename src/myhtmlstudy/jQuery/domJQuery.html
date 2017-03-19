@@ -21,6 +21,33 @@
 			$('#btn4').click(function(){
 				alert('href属性的值为：'+ $('#runoob').attr('href'));// 注意 ： 与其他不同的是attr()方法有一个参数
 			});
+			
+			$('#btn5').click(function(){
+				$('#p1').text('Hello World');
+			});
+			
+			$('#btn6').click(function(){
+				$('#p2').html('Hello <b>World</b>');
+			});
+			
+			$('#btn7').click(function(){
+				$('#age').val('RUNOOB'); //注意：以上三个，没有参数的则为get,有参数的则为set
+			});
+			
+			//当然，也可以用回调，回调的写法如下：
+			//$('#btn7').click(function(){
+			//	$('#age').val(function(i,origValue){  第一个参数为被选中参数的下标，第二个参数为旧值(原始值)
+			//		return "旧 val: " + origValue + " 新 val: Hello Ketty (index: " + i + ")";
+			//  });
+			//});
+			
+			$('#btn8').click(function(){
+				$('#p3').attr({'href':'http://www.runoob.com/jquery','title':'JQuery教程'});
+				// 通过修改的 title 值来修改链接名称
+				title =  $("#p3").attr('title');
+				$("#p3").html(title);
+			});
+			
 		});
 	</script>
 </head>
@@ -39,6 +66,17 @@
 	<button id='btn3'>显示表单输入值</button>
 	
 	<p><a href="http://www.runoob.com" id="runoob">菜鸟教程</a></p>
-	<button id='btn4'>点击</button>
+	<button id='btn4'>显示属性</button>
+	
+	<p id='p1'>这是一个段落</p>
+	<p id='p2'>这是另外一个段落</p>
+	<p>输入框：<input id='age' type='text' value='菜鸟教程'></input></p>
+	<button id='btn5'>设置文本</button>
+	<button id='btn6'>设置HTML</button>
+	<button id='btn7'>设置值</button>
+	
+	<p><a href="http://www.runoob.com" id="p3">菜鸟教程</a></p>
+	<button id='btn8'>设置属性</button>
+	<p>点击按钮修改后，可以查看 href 和 title 是否变化。</p>
 </body>
 </html>
