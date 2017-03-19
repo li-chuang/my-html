@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'><meta>
+	<title>我的JQuery</title>
+	<script src='https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn').click(function(){
+				$('#p1').css('color','red') // css()方法的key和value都要用括号，中间用逗号分隔
+					.slideUp(3000)
+					.slideDown(3000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>链(Chaining)</h2>
+	<p>允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条</p>
+	
+	<button id='btn'>点我</button>
+	<p id='p1'>把 css()、slideUp() 和 slideDown() 链接在一起。"p1" 元素首先会变为红色，然后向上滑动，再然后向下滑动</p>
+</body>
+</html>
