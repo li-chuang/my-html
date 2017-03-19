@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'><meta>
+	<title>我的JQuery</title>
+	<script src='https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn1').click(function(){
+				$('#p1').hide(3000,function(){
+					alert('当隐藏100%完成的时候才执行！！');//此处用了回调
+				});
+			});
+			
+			$('#btn2').click(function(){
+				$('#p2').hide(3000);
+				alert('警告框会在隐藏效果完成前弹出!!');//此处没有使用回调
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>Callback 方法</h2>
+	<p>Callback 函数在当前动画 100% 完成之后执行</p>
+	
+	<button id='btn1'>隐藏后回调</button>
+	<p id='p1'>我们段落内容，点击“隐藏”按钮我就会消失</p>
+	
+	<button id='btn2'>直接隐藏</button>
+	<p id='p2'>我们段落内容，点击“隐藏”按钮我就会消失</p>
+	
+</body>
+</html>
