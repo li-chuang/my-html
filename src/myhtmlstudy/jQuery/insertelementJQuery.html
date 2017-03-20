@@ -21,6 +21,14 @@
 			$('#btn4').click(function(){
 				$('ol').prepend('<li>这里是插入的列表项</li>');
 			});
+			
+			$('#btn5').click(function(){
+				var txt1="<p>文本。</p>";              // 使用 HTML 标签创建文本
+				var txt2=$("<p></p>").text("文本。");  // 使用 jQuery 创建文本
+				var txt3=document.createElement("p");
+				txt3.innerHTML="文本。";               // 使用 DOM 创建文本 text with DOM
+				$('#p1').append(txt1,txt2,txt3);
+			});
 		});
 	</script>
 </head>
@@ -44,5 +52,10 @@
 	<h5> prepend() 方法在被选元素的开头插入内容</h5>
 	<button id='btn3'>在开头添加文本</button>
 	<button id='btn4'>在开头添加列表项</button>
+	
+	<h5>after() 和 before() 方法与上面的两种情况基本类似</h5>
+	
+	<h5>以上4种都可以一次插入多个，且可以以多种方式生成代码</h5>
+	<button id='btn5'>一次插入多个文本</button>
 </body>
 </html>
