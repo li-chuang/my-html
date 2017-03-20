@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的JQuery</title>
+	<script src='https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn1').click(function(){
+				$('#p1').append('<p>这是我的<b>追加文本<b><p>');
+			});
+			
+			$('#btn2').click(function(){
+				$('ol').append('<li>这里是添加的列表项</li>');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2>添加元素</h2>
+	<p>append() - 在被选元素的结尾插入内容</p>
+	<p>prepend() - 在被选元素的开头插入内容</p>
+	<p>after() - 在被选元素之后插入内容</p>
+	<p>before() - 在被选元素之前插入内容</p>
+	
+	<h5>append() 方法在被选元素的结尾插入内容。</h5>
+	<p id='p1'>在此元素的末尾添加内容</p>
+	<ol>
+		<li>List item 1</li>
+		<li>List item 2</li>
+		<li>List item 3</li>
+	</ol>
+	<button id='btn1'>在末尾添加文本</button>
+	<button id='btn2'>在末尾添加列表项</button>
+</body>
+</html>
