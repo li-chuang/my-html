@@ -13,6 +13,14 @@
 			$('#btn2').click(function(){
 				$('ol').append('<li>这里是添加的列表项</li>');
 			});
+			
+			$('#btn3').click(function(){
+				$('#p1').prepend('<p>这是我的<b>插入文本</b></p>');
+			});
+			
+			$('#btn4').click(function(){
+				$('ol').prepend('<li>这里是插入的列表项</li>');
+			});
 		});
 	</script>
 </head>
@@ -32,5 +40,9 @@
 	</ol>
 	<button id='btn1'>在末尾添加文本</button>
 	<button id='btn2'>在末尾添加列表项</button>
+	
+	<h5> prepend() 方法在被选元素的开头插入内容</h5>
+	<button id='btn3'>在开头添加文本</button>
+	<button id='btn4'>在开头添加列表项</button>
 </body>
 </html>
