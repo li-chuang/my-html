@@ -10,6 +10,18 @@
 				$('h1,h2,p').addClass('blue');
 				$('div').addClass('important blue');// 可以同时添加多个类，中间用空格分开即可
 			});
+			
+			$('#btn2').click(function(){
+				alert('p1背景颜色 ='+ $('#p1').css('background-color')
+					+'p2背景颜色 ='+ $('#p2').css('background-color')
+					+'p3背景颜色 ='+ $('#p3').css('background-color'));
+			});
+			
+			$('#btn3').click(function(){
+				$('#p1').css({'background-color':'yellow','font-size':'200%'});// 注意：一个参数时为String格式，多个参数的时候是json格式，有大括号，有冒号
+				$('#p2').css({'background-color':'yellow','font-size':'200%'});
+				$('#p3').css({'font-size':'200%'});
+			});
 		});
 	</script>
 	<style>
@@ -20,6 +32,18 @@
 		
 		.blue{
 			color:blue;
+		}
+		
+		#p1{
+			background-color:red;
+		}
+		
+		#p2{
+			background-color:blue;
+		}
+		
+		#p3{
+			background-color:yellow;
 		}
 	</style>
 </head>
@@ -39,5 +63,14 @@
 	<br>
 	<button id='btn1'>为元素添加 class</button>
 	
+	<p>addClass(),removeClass(),toggleClass()实际上使用方法基本一致</p>
+		
+	<h2>css() 方法</h2>
+	<p>css() 方法设置或返回被选元素的一个或多个样式属性。</p>
+	<p id='p1'>这是一个段落。</p>
+	<p id='p2'>这是一个段落。</p>
+	<p id='p3'>这是一个段落。</p>
+	<button id='btn2'>获取样式属性</button>
+	<button id='btn3'>设置样式属性</button>
 </body>
 </html>
