@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'></meta>
+	<title>我的JQuery</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+		.col-md-6{
+			background-color:#dedef8;
+			box-shadow:inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+		}
+	</style>
+</head>
+<body>
+
+	<div class='container'>
+		<h1>Hello World!!</h1>		
+		<div class='row'>
+			<div class="col-md-6 col-lg-4"><!-- 设置多个网格类，在不同的设备中，会选择不同的对应类，大型设备会选择带lg的类，中型设备会选择带md的类 -->
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+					enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+					nisi ut aliquip ex ea commodo consequat. 
+				</p>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+					accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
+					quae ab illo inventore veritatis et quasi architecto beatae vitae 
+					dicta sunt explicabo. 
+				</p>
+			 </div>
+
+		    <div class="col-md-6 col-lg-8"><!-- 在一个div中设置多个类，不同的设备对应不同的布局格式 -->
+			    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+					accusantium doloremque laudantium.
+			    </p>
+			    <p> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
+					consectetur, adipisci velit, sed quia non numquam eius modi 
+					tempora incidunt ut labore et dolore magnam aliquam quaerat 
+					voluptatem. 
+				 </p>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>
