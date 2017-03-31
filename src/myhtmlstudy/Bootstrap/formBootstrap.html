@@ -28,5 +28,37 @@
 		<button type='submit' class='button button-default'>提交</button>
 	</form>
 	<h2>内联在form标签中添加.form-inline即可，使表单元素水平排列，向左对齐，注意设置各元素的宽度</h2>
+	
+	<h2 class='text-center'>水平表单,接近一般表单的用法</h2>
+	<form role='form' class='form-horizontal'>
+		<div class='col-md-4 col-md-offset-4'>
+			<div class='form-group'>
+				<label for='username' class='col-md-2 control-label'>用户名：</label>
+				<div class='col-md-6 col-md-offset-2'>
+					<input type='text' class='form-control' id='username' placeholder='请输入名字'></input>
+				</div>
+			</div>
+			<div class='form-group'>
+				<label for='psd' class='col-md-2 control-label'>密码：</label>
+				<div class='col-md-6 col-md-offset-2'>
+					<input type='password' id='psd' class='form-control' placeholder='请输入密码'></input>
+				</div>
+			</div>
+			<div class='form-group'>
+				<div class='checkbox col-md-4 col-md-offset-3'>
+					<label>
+						<input type='checkbox'>请记住我</input>
+					</label>
+				</div>			
+			</div>
+			<div class='form-group'>
+				<div class='col-md-4 col-md-offset-3'>
+					<button class='button button-default'>点我提交</button>
+				</div>		
+			</div>
+			
+			
+		</div>		
+	</form>
 </body>
 </html>
