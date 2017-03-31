@@ -30,10 +30,10 @@
 	<h2>内联在form标签中添加.form-inline即可，使表单元素水平排列，向左对齐，注意设置各元素的宽度</h2>
 	
 	<h2 class='text-center'>水平表单,接近一般表单的用法</h2>
-	<form role='form' class='form-horizontal'>
+	<form role='form' class='form-horizontal'><!-- form-horizontal设置一个水平布局的表单 -->
 		<div class='col-md-4 col-md-offset-4'>
-			<div class='form-group'>
-				<label for='username' class='col-md-2 control-label'>用户名：</label>
+			<div class='form-group'><!-- form-group设置它们是一个表单组 -->
+				<label for='username' class='col-md-2 control-label'>用户名：</label><!-- 注意标签中的for属性 -->
 				<div class='col-md-6 col-md-offset-2'>
 					<input type='text' class='form-control' id='username' placeholder='请输入名字'></input>
 				</div>
