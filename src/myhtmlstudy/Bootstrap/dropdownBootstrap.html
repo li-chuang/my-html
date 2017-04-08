@@ -16,6 +16,7 @@
 			<span class="caret"></span><!-- 这个是“主题”后面一个向下的箭头，放在span标签中生成 -->
 		</button>
 		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"><!-- 注意它的role，而aria-labelledby明显指向button中id的 -->
+			<li role="presentation" class="dropdown-header">下拉菜单标题A</li><!-- class="dropdown-header"添加下拉菜单标题 -->
 			<li role="presentation">
 				<a role="menuitem" tabindex="-1" href="#">Java</a><!-- 此处role为menuitem -->
 			</li>
@@ -26,6 +27,7 @@
 				<a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
 			</li>
 			<li role="presentation" class="divider"></li><!-- 下拉菜单中的分割线 -->
+			<li role="presentation" class="dropdown-header">下拉菜单标题B</li>
 			<li role="presentation">
 				<a role="menuitem" tabindex="-1" href="#">分离的链接</a>
 			</li>
